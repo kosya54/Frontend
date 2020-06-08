@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
@@ -8,87 +8,114 @@
 <form action="" method="POST">
     <div>
         <label>
-            Текстовоеполе 1
-            <input type="text" name="field1"/>
+            Текстовое поле 1
+            <input type="text" name="field1">
         </label>
     </div>
+
     <div>
         <label>
-            Текстовоеполе 2
-            <input type="text" name="field2"/>
+            Текстовое поле 2
+            <input type="text" name="field2">
         </label>
     </div>
+
     <div>
         <label>
-            Текстовоеполе 3
-            <input type="text" name="field3"/>
+            Текстовое поле 3
+            <input type="text" name="field3">
         </label>
     </div>
-    <br/>
+    <br>
+
     <div>
         <label>
             Многострочное поле 1
             <textarea name="area1"></textarea>
         </label>
     </div>
+
     <div>
         <label>
             Многострочное поле 2
             <textarea name="area2"></textarea>
         </label>
     </div>
-    <br/>
+    <br>
+
     <div>
-        <label>
-            Чекбокс
-            <input checked type="checkbox" value="1" name="myCheckbox"/>
-            <input type="checkbox" value="2" name="myCheckbox"/>
-            <input type="checkbox" value="3" name="myCheckbox"/>
-            <input type="checkbox" value="4" name="myCheckbox"/>
-            <input type="checkbox" value="5" name="myCheckbox"/>
-        </label>
+        <h4>Чекбокс</h4>
+        <input id="check1" checked type="checkbox" value="1" name="myCheckbox">
+        <label for="check1">1</label>
+
+        <input id="check2" type="checkbox" value="2" name="myCheckbox">
+        <label for="check2">2</label>
+
+        <input id="check3" type="checkbox" value="3" name="myCheckbox">
+        <label for="check3">3</label>
+
+        <input id="check4" type="checkbox" value="4" name="myCheckbox">
+        <label for="check4">4</label>
+
+        <input id="check5" type="checkbox" value="5" name="myCheckbox">
+        <label for="check5">5</label>
     </div>
-    <br/>
+    <br>
+
     <div>
-        <label>
-            Радио-баттон
-            <input type="radio" value="1" name="myRadio"/>
-            <input type="radio" value="2" name="myRadio"/>
-            <input checked type="radio" value="3" name="myRadio"/>
-            <input type="radio" value="4" name="myRadio"/>
-            <input type="radio" value="5" name="myRadio"/>
-        </label>
+        <h4>Радио-баттон</h4>
+        <input id="radio1" type="radio" value="1" name="myRadio">
+        <label for="radio1">1</label>
+
+        <input id="radio2" type="radio" value="2" name="myRadio">
+        <label for="radio2">2</label>
+
+        <input id="radio3" checked type="radio" value="3" name="myRadio">
+        <label for="radio3">3</label>
+
+        <input id="radio4" type="radio" value="4" name="myRadio">
+        <label for="radio4">4</label>
+
+        <input id="radio5" type="radio" value="5" name="myRadio">
+        <label for="radio5">5</label>
     </div>
-    <br/>
+    <br>
+
     <div>
         <label>
             Выпадающий список
             <select name="mySelect">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Значение 1</option>
+                <option value="2">Значение 2</option>
+                <option value="3">Значение 3</option>
+                <option value="4">Значение 4</option>
+                <option value="5">Значение 5</option>
             </select>
         </label>
     </div>
-    <br/>
+    <br>
+
     <div>
         <label>
             Список множественного выбора
             <select multiple name="myMultipleSelect" size="3">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Значение 1</option>
+                <option value="2">Значение 2</option>
+                <option value="3">Значение 3</option>
+                <option value="4">Значение 4</option>
+                <option value="5">Значение 5</option>
+                <option value="6">Значение 6</option>
+                <option value="7">Значение 7</option>
             </select>
         </label>
     </div>
+
     <p>
-        <input type="submit" value="Отправить"/>
+        <input type="submit" value="Отправить">
     </p>
 </form>
+
 <a href="secondPage.html">На вторую страницу</a>
+
 </body>
 </html>
