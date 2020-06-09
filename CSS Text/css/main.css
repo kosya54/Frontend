@@ -4,7 +4,7 @@ html {
     color: #676565;
 }
 
-.container {
+.form-container {
     max-width: 850px;
     min-width: 400px;
     max-height: 100%;
