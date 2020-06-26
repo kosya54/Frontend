@@ -33,7 +33,6 @@
 
 (function () {
     var array1 = [];
-
     for (var i = 1; i <= 100; i++) {
         array1.push(i);
     }
