@@ -10,53 +10,50 @@ h1 {
 
 .container {
     max-width: 845px;
-    min-width: 400px;
     margin: 0 auto;
     color: #676565;
 }
 
-.form-container {
+.form {
     box-sizing: border-box;
     padding: 20px;
     background: #feeed6;
 }
 
-.form-container > form > div > label {
+.title-1 {
     font-weight: bold;
 }
 
-.form-container > form input[type="text"], .form-container > form textarea {
+.long-input, .textarea {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
     border: none;
-    text-indent: 15px;
+    padding: 0 15px;
     color: #676565;
 }
 
-.form-container > form input[type="text"], .form-container > form textarea {
+.long-input, .textarea {
     margin: 10px 0 20px 0;
 }
 
-.form-container > form > div:nth-last-child(1) {
+.form > div:nth-last-child(1) {
     text-align: right;
     margin-top: 20px;
 }
 
-.form-container > form input[type="text"]:focus, .form-container > form textarea:focus {
+.long-input:focus, .textarea:focus {
     outline: none;
 }
 
-.form-container > form textarea {
+.textarea {
     height: 130px;
-    padding-top: 15px;
+    padding: 15px;
     resize: vertical;
-    overflow-x: hidden;
 }
 
-.form-container > form input[type="submit"] {
-    width: 170px;
-    height: 36px;
+.button-1 {
+    padding: 0.625em 0.9375em 0.625em 0.9375em;
     font-weight: bold;
     color: #ffffff;
     background: #378db2;
@@ -65,6 +62,6 @@ h1 {
     cursor: pointer;
 }
 
-.form-container > form input[type="submit"]:hover {
+.button-1:hover {
     background: #32728d;
 }
