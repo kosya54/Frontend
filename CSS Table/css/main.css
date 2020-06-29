@@ -2,69 +2,45 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
-.div-table-container {
+.table-container {
     max-width: 860px;
     margin: 0 auto;
 }
 
-.div-table {
-    display: table;
+.content-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.div-table div {
-    height: 50px;
+.content-table thead {
+    font-size: 1.3em;
+    color: #ffffff;
+    background: #3498db;
+}
+
+.content-table tbody {
+    font-size: 1.2em;
+    color: #525058;
+}
+
+.content-table td {
+    padding: 0.625em;
+    box-sizing: border-box;
     border: 1px solid #d3d3d3;
 }
 
-.div-table div:nth-child(1) {
-    display: table-header-group;
-}
-
-.div-table div:nth-child(1) > div {
-    display: table-row;
-}
-
-.div-table div:nth-child(1) > div > div {
-    display: table-cell;
-    background: #3498db;
-    font-size: 1.3em;
-    color: #ffffff;
-}
-
-.div-table div:nth-child(1) > div > div:nth-child(3) {
+.content-table td:nth-child(3) {
     width: 310px;
 }
 
-.div-table div:nth-child(1) > div > div:nth-child(4) {
+.content-table td:nth-child(4) {
     width: 200px;
 }
 
-.div-table div:nth-child(2) {
-    display: table-row-group;
-}
-
-.div-table div:nth-child(2) > div {
-    display: table-row;
-}
-
-.div-table div:nth-child(2) > div:nth-child(odd) > div {
+.content-table > tbody > tr:nth-child(odd) {
     background: #eeeeee;
 }
 
-.div-table div:nth-child(2) > div:nth-child(even) > div {
+.content-table > tbody > tr:nth-child(even) {
     background: #ffffff;
-}
-
-.div-table div:nth-child(2) > div > div {
-    display: table-cell;
-    color: #525058;
-    font-size: 1.2em;
-}
-
-/* Отступы для содержимого от левого края в заголовке и теле таблицы, а так же вертикальное выравнивание по середине */
-.div-table div:nth-child(1) > div > div, .div-table div:nth-child(2) > div > div {
-    text-indent: 15px;
-    vertical-align: middle;
 }
