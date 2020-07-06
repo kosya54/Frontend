@@ -16,12 +16,10 @@
     }
     
     function getEvenSum(array) {
-        return array.reduce(function (sum, elem) {
-            if (elem % 2 === 0) {
-                sum += elem;
-            }
-
-            return sum;
+        return array.filter(function (elem) {
+            return elem % 2 === 0;
+        }).reduce(function (sum, elem) {
+            return sum + elem;
         }, 0);
     }
 
