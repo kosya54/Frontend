@@ -1,0 +1,52 @@
+input {
+    box-sizing: border-box;
+}
+
+.temperature-container {
+    display: flex;
+    max-width: 600px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+
+    height: 200px;
+    border: 1px solid red;
+}
+
+.left-side {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.center {
+    width: 20%;
+}
+
+.right-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right-side > div {
+    width: 100%;
+}
+
+.big-input {
+    width: 100px;
+    height: 100px;
+}
+
+.medium-input {
+    width: 100px;
+    height: 40px;
+}
+
+.temperature-container div {
+    border: 1px solid blue;
+}
