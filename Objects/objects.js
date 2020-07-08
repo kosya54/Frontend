@@ -1,42 +1,42 @@
 (function () {
     var country = [
         {
-            name: "Russia",
+            name: "Россия",
             cities: [{
-                name: "Moscow",
+                name: "Москва",
                 population: 11920000
             }, {
-                name: "Novosibirsk",
+                name: "Новосибирск",
                 population: 1511000
             }, {
-                name: "Kazan",
+                name: "Казань",
                 population: 1169000
             }]
         }, {
-            name: "Japan",
+            name: "Япония",
             cities: [{
-                name: "Gamagori",
+                name: "Гамагори",
                 population: 80693
             }, {
-                name: "Shinshiro",
+                name: "Шинширо",
                 population: 47527
             }, {
-                name: "Nisshin",
+                name: "Нишин",
                 population: 88419
             }]
         }, {
-            name: "Commonwealth of Australia",
+            name: "Австралия",
             cities: [{
-                name: "Ballarat",
+                name: "Балларат",
                 population: 101588
             }, {
-                name: "Canberra",
+                name: "Канберра",
                 population: 410301
             }, {
-                name: "Perth",
+                name: "Перт",
                 population: 2059484
             }, {
-                name: "Meekatharra",
+                name: "Микатарра",
                 population: 708
             }]
         }
@@ -67,6 +67,29 @@
         return countrySammary;
     }
 
-    console.log(getCountryMaxCity(country)[0].name);
-    console.log(getCountrySummary(country));
+    function showCountry(country) {
+        var countryMaxCity = getCountryMaxCity(country);
+
+        if (countryMaxCity.length > 1) {
+            console.log("Страны с максимальным количеством городов:");
+        } else {
+            console.log("Страна с максимальным количеством городов:");
+        }
+
+        for (var i = 0; i < countryMaxCity.length; i++) {
+            console.log(countryMaxCity[i].name + ": " + countryMaxCity[i].cities.length);
+        }
+    }
+
+    function showCountrySummary(country) {
+        var countrySummary = getCountrySummary(country);
+
+        console.log("Название страны: суммарная численность по стране.");
+        for (var key in countrySummary) {
+            console.log(key + ": " + countrySummary[key]);
+        }
+    }
+
+    showCountry(country);
+    showCountrySummary(country);
 }());
