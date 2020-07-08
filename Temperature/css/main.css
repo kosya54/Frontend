@@ -1,4 +1,4 @@
-input {
+.big-input, .medium-input {
     box-sizing: border-box;
 }
 
@@ -7,9 +7,8 @@ input {
     max-width: 600px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
 
-    height: 200px;
+    height: 100px;
     border: 1px solid red;
 }
 
@@ -28,13 +27,9 @@ input {
 .right-side {
     width: 40%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.right-side > div {
-    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .big-input {
@@ -47,6 +42,10 @@ input {
     height: 40px;
 }
 
+.last-container {
+    margin: 20px 0 0 0;
+}
+
 .temperature-container div {
-    border: 1px solid blue;
+/*    border: 1px solid blue; */
 }
