@@ -3,41 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Temperature converter</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <form>
-        <div class="temperature-container">
-            <div class="left-side">
-                <div>
-                    <label>
-                        <input id="celsius" class="big-input" type="text" name="celsius">C
-                    </label>
-                </div>
-            </div>
-
-            <div class="center">
-
-            </div>
-
-            <div class="right-side">
-                <div>
-                    <div>
-                        <label>
-                            <input id="kelvin" class="medium-input" type="text" name="kelvin">K
-                        </label>
-                    </div>
-
-                    <div class="last-container">
-                        <label>
-                            <input id="fahrenheit" class="medium-input" type="text" name="fahrenheit">F
-                        </label>
-                    </div>
-                </div>
-            </div>
+    <div class="temperature-container">
+        <div>
+            <label class="title-1">
+                <input class="big-input" type="text" name="celsius">
+                &deg;C
+            </label>
         </div>
-    </form>
-<script src="js/converter.js"></script>
+        <div class="title-1">=</div>
+        <div>
+            <label class="title-1">
+                <input class="big-input" type="text" name="fahrenheit" readonly="readonly">
+                &deg;F
+            </label>
+        </div>
+        <div class="title-1">=</div>
+        <div>
+            <label class="title-1">
+                <input class="big-input" type="text" name="kelvin" readonly="readonly">
+                K
+            </label>
+        </div>
+    </div>
+    <script src="js/converter.js"></script>
 </body>
 </html>
