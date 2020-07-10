@@ -33,6 +33,10 @@ div, input {
     color: #2F4F4F;
 }
 
+.red-border {
+    border-bottom: 2px solid red;
+}
+
 .no-cursor {
     color: transparent;
     text-shadow: 0 0 0 black;
