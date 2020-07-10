@@ -2,16 +2,22 @@ function ready() {
     var degreesInput = document.querySelector('input[name="celsius"]');
 
     degreesInput.addEventListener("input", function (event) {
-        var enteredDegrees = degreesInput.value;
+        var enteredChar = this.value.charAt(this.value.length - 1);
+        var invalidDataClass = "red-border";
 
-        if (!Number(enteredDegrees) && enteredDegrees !== '' && enteredDegrees !== '0') {
-            alert("Введите число.");
+        if (isNaN(parseFloat(enteredChar))) {
+            this.classList.add(invalidDataClass);
 
             return;
         }
 
-        document.querySelector('input[name="fahrenheit"]').value = (Number(enteredDegrees) * 9 / 5) + 32;
-        document.querySelector('input[name="kelvin"]').value = Number(enteredDegrees) + 273.15;
+        if (this.classList.contains(invalidDataClass)) {
+            this.classList.remove(invalidDataClass);
+        }
+
+        var enteredDegrees = parseFloat(this.value);
+        document.querySelector('input[name="fahrenheit"]').value = ((enteredDegrees * 9 / 5) + 32).toFixed(2);
+        document.querySelector('input[name="kelvin"]').value = (enteredDegrees + 273.15).toFixed(2);
     });
 }
 
