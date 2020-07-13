@@ -1,0 +1,56 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+div, input {
+    box-sizing: border-box;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-container {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #4682B4;
+}
+
+.input-container input[type="text"], 
+.list-container input[type="text"] {
+    width:500px;
+    padding: 0.2em;
+    border: 2px solid #4682B4;
+}
+
+.input-container input[type="button"], 
+.list-container input[type="button"] {
+    padding: 0.2em;
+    background: #ffffff;
+    border: 2px solid #4682B4;
+}
+
+.input-container input[type="button"]:hover, 
+.list-container input[type="button"]:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background: #4682B4;
+}
+
+.list-container div {
+    border-top: 1px solid #4682B4;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.list-container li {
+    text-align: justify;
+    padding: 10px;
+}
+
+.list-container input[type="button"]:nth-last-child(1) {
+    margin-left: 10px;
+}
