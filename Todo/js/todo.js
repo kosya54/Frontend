@@ -7,7 +7,7 @@ function ready() {
         editButton.setAttribute("type", "button");
         editButton.setAttribute("name", "editListItem");
         editButton.setAttribute("value", "Редактировать");
-        editButton.addEventListener("click", function (event) {
+        editButton.addEventListener("click", function () {
             editListItem(listItem);
         });
 
@@ -15,7 +15,7 @@ function ready() {
         deleteButton.setAttribute("type", "button");
         deleteButton.setAttribute("name", "deleteListItem");
         deleteButton.setAttribute("value", "Удалить");
-        deleteButton.addEventListener("click", function (event) {
+        deleteButton.addEventListener("click", function () {
             clearListItem(listItem);
         });
 
@@ -43,11 +43,11 @@ function ready() {
         saveButton.setAttribute("type", "button");
         saveButton.setAttribute("name", "saveRecord");
         saveButton.setAttribute("value", "Сохранить");
-        saveButton.addEventListener("click", function (event) {
+        saveButton.addEventListener("click", function () {
             addNewListItem(editInput.value);
             clearListItem(listItem);
         });
-        
+
         listItem.appendChild(editInput);
         listItem.appendChild(saveButton);
     }
@@ -56,9 +56,9 @@ function ready() {
         listItem.parentNode.removeChild(listItem);
     }
 
-    document.querySelector('input[name="addRecord"]').addEventListener("click", function (event) {
+    document.querySelector('input[name="addRecord"]').addEventListener("click", function () {
         var listInput = document.querySelector('input[name="newRecord"]');
-        
+
         if (listInput.value === "") {
             alert("Введите данные");
 
@@ -66,6 +66,7 @@ function ready() {
         }
 
         addNewListItem(listInput.value);
+        listInput.value = "";
     });
 }
 

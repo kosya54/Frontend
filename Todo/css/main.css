@@ -18,21 +18,21 @@ div, input {
     border-bottom: 1px solid #4682B4;
 }
 
-.input-container input[type="text"], 
+.input-container input[type="text"],
 .list-container input[type="text"] {
-    width:500px;
+    width: 500px;
     padding: 0.2em;
     border: 2px solid #4682B4;
 }
 
-.input-container input[type="button"], 
+.input-container input[type="button"],
 .list-container input[type="button"] {
     padding: 0.2em;
     background: #ffffff;
     border: 2px solid #4682B4;
 }
 
-.input-container input[type="button"]:hover, 
+.input-container input[type="button"]:hover,
 .list-container input[type="button"]:hover {
     cursor: pointer;
     color: #ffffff;
