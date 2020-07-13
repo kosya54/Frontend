@@ -56,15 +56,15 @@
     }
 
     function getCountrySummary(country) {
-        var countrySammary = {};
+        var countrySummary = {};
 
         country.forEach(function (elem) {
-            countrySammary[elem.name] = elem.cities.reduce(function (sum, citiesElem) {
+            countrySummary[elem.name] = elem.cities.reduce(function (sum, citiesElem) {
                 return sum + citiesElem.population;
             }, 0);
         });
 
-        return countrySammary;
+        return countrySummary;
     }
 
     function showCountry(country) {
