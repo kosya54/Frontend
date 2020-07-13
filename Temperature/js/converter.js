@@ -1,7 +1,7 @@
 function ready() {
     var degreesInput = document.querySelector('input[name="celsius"]');
 
-    degreesInput.addEventListener("input", function (event) {
+    degreesInput.addEventListener("input", function () {
         var enteredChar = this.value.charAt(this.value.length - 1);
         var invalidDataClass = "red-border";
 
