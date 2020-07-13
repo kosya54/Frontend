@@ -14,7 +14,7 @@
     function getLastSubarray(array) {
         return array.slice(-5);
     }
-    
+
     function getEvenSum(array) {
         return array.filter(function (elem) {
             return elem % 2 === 0;
@@ -23,7 +23,7 @@
         }, 0);
     }
 
-    function getArraySquaresEvenNumbers(array) {
+    function getArraySquaresEvenNumbers() {
         var array = [];
         for (var i = 1; i <= 100; i++) {
             array.push(i);
