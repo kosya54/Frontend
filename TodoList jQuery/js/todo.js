@@ -2,13 +2,13 @@ function addToListItem(listItem, textData) {
     listItem.text(textData);
 
     $("<div></div>")
-        .append($("<button>Редактировать</button>")
-                    .attr({type: "button", name: "editButton"})
+        .append($("<input>")
+                    .attr({type: "button", name: "editButton", value: "Редактировать"})
                     .click(function () {
                         editListItem(listItem);
                     }))
-        .append($("<button>Удалить</button>")
-                    .attr({type: "button", name: "deleteButton"})
+        .append($("<input>")
+                    .attr({type: "button", name: "deleteButton", value: "Удалить"})
                     .click(function () {
                         listItem.remove();
                     }))
@@ -24,19 +24,18 @@ function editListItem(listItem) {
     
     listItem.append(editInput);
 
-    $("<button>Сохранить</button>")
-        .attr({type: "button", name: "saveButton"})
+    $("<input>")
+        .attr({type: "button", name: "saveButton", value: "Сохранить"})
         .click(function () {
             addToListItem(listItem, editInput.val());
         })
         .appendTo(listItem);
-        
 }
 
 $(document).ready(function() {
-    $("button[name='addButton']").click(function() {
-        var list = $(".output-container > ol");
-        var listItem = $("<li></li>");
+    var list = $("<ol></ol>").appendTo($(".output-container"));
+
+    $("input[name='addButton']").click(function() {
         var input = $("input[name='newRecord']");
 
         if (input.val() === "") {
@@ -45,6 +44,7 @@ $(document).ready(function() {
             return;
         }
 
+        var listItem = $("<li></li>");
         addToListItem(listItem, input.val());
 
         list.append(listItem);
