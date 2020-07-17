@@ -3,15 +3,15 @@ function addToListItem(listItem, textData) {
 
     $("<div></div>")
         .append($("<input>")
-                    .attr({type: "button", name: "editButton", value: "Редактировать"})
-                    .click(function () {
-                        editListItem(listItem);
-                    }))
+            .attr({type: "button", name: "editButton", value: "Редактировать"})
+            .click(function () {
+                editListItem(listItem);
+            }))
         .append($("<input>")
-                    .attr({type: "button", name: "deleteButton", value: "Удалить"})
-                    .click(function () {
-                        listItem.remove();
-                    }))
+            .attr({type: "button", name: "deleteButton", value: "Удалить"})
+            .click(function () {
+                listItem.remove();
+            }))
         .appendTo(listItem);
 }
 
@@ -21,7 +21,7 @@ function editListItem(listItem) {
 
     var editInput = $("<input>")
         .attr({type: "text", name: "editRecord", value: textData});
-    
+
     listItem.append(editInput);
 
     $("<input>")
@@ -32,10 +32,10 @@ function editListItem(listItem) {
         .appendTo(listItem);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
     var list = $("<ol></ol>").appendTo($(".output-container"));
 
-    $("input[name='addButton']").click(function() {
+    $("input[name='addButton']").click(function () {
         var input = $("input[name='newRecord']");
 
         if (input.val() === "") {
